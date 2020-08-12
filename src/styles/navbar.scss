@@ -1,0 +1,120 @@
+header {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 120px;
+  }
+  h3 {
+    font-size: 15px;
+    margin-top: 0.7rem;
+    text-align: center;
+    font-weight: 100;
+  }
+  nav {
+    .la-times {
+      font-size: 40px;
+      // display: none;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      opacity: 0;
+      visibility: 0;
+      transition: all 0.5s;
+    }
+    display: flex;
+    ul {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      list-style: none;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      height: 100vh;
+      width: 100%;
+      padding: 0 20px;
+      transition: opacity 0.4s 0s, visibility 0.4s 0s;
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 2;
+      visibility: hidden;
+      opacity: 0;
+      overflow: hidden;
+      overflow-y: scroll;
+      letter-spacing: 1px;
+      :first-child {
+        margin-top: 200px;
+      }
+      li {
+        margin-bottom: 0.8rem;
+        a {
+          color: #1f1f1f;
+          text-decoration: none;
+        }
+        :active {
+          font-weight: 400;
+        }
+      }
+    }
+    button {
+      display: none;
+    }
+    .icon-wrapper {
+      margin-top: 1.3rem;
+      display: flex;
+      flex-direction: row;
+      .hamburger {
+        margin-right: 1.4rem;
+      }
+    }
+  }
+  i {
+    font-size: 29px;
+  }
+}
+
+header {
+  .true {
+    ul {
+      background-color: #f8f8f8;
+      transition-delay: 0s, 0s;
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0s, 0s;
+    }
+    .la-times {
+      opacity: 1;
+      visibility: 1;
+      // transition-delay: 0;
+    }
+  }
+}
+
+.hamburger {
+  width: 27px;
+  height: 27px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  .line {
+    width: 27px;
+    height: 2px;
+    background-color: black;
+    border-radius: 2px;
+  }
+  .line-3 {
+    width: 60%;
+  }
+  &:hover {
+    .line {
+      background-color: #313131;
+    }
+  }
+}

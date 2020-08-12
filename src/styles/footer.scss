@@ -1,0 +1,47 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  .bottom {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    bottom: 0;
+    transition: all 0.3s ease-in;
+    p {
+      width: 100%;
+      color: white;
+      text-align: center;
+    }
+    .act-button {
+      height: 60px;
+      width: 60px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: -30px;
+      transform: translateX(-50%);
+    }
+  }
+
+  .top {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color: #4e4e4e;
+    top: 0;
+    transition: all 0.3s ease-in;
+  }
+
+  .true {
+    bottom: -400px;
+  }
+  .active {
+    height: 400px;
+  }
+}

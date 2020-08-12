@@ -1,0 +1,57 @@
+// pallete
+$primary: #1d1f24;
+$secondary: #2f3238;
+$custom: #eeeeee;
+$lod: #b7b7b7;
+
+//fonts
+// @import "./fonts/bpg-arial-master/css/bpg-arial.min.css";
+// @import "./fonts/bpg-nateli-master/css/bpg-nateli.min.css";
+
+$arial: "BPG Arial", sans-serif;
+$nateli: "BPG Nateli", sans-serif;
+
+* {
+  font-family: $arial;
+}
+
+//containers --------------------------------
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media screen and (min-width: 1200) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media screen and (min-width: 1200) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .dif-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 2560px;
+  }
+}
