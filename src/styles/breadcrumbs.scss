@@ -1,0 +1,26 @@
+.breadcrumbs {
+  //   padding: 10px 30px;
+  //   margin-bottom: 25px;
+  a,
+  span {
+    text-decoration: none;
+    color: rgba(black, 0.6);
+    font-family: $vera;
+    font-weight: 1;
+    font-size: 14px;
+  }
+  i {
+    margin-right: 4px;
+  }
+  span {
+    margin: 0 4px;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+  a {
+    &:last-of-type {
+      color: $primary;
+      opacity: 0.6;
+    }
+  }
+}

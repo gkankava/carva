@@ -17,17 +17,18 @@ header {
   nav {
     .la-times {
       font-size: 40px;
-      // display: none;
       position: fixed;
       top: 20px;
       left: 20px;
       opacity: 0;
       visibility: 0;
       transition: all 0.5s;
+      z-index: 600;
     }
     display: flex;
+    flex-direction: row;
     ul {
-      z-index: 1;
+      z-index: 600;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -55,9 +56,15 @@ header {
         a {
           color: #1f1f1f;
           text-decoration: none;
+          &:hover {
+            color: $secondary;
+          }
         }
         :active {
           font-weight: 400;
+        }
+        .active-link {
+          color: $primary;
         }
       }
     }
@@ -75,6 +82,10 @@ header {
   }
   i {
     font-size: 29px;
+    cursor: pointer;
+    &:hover {
+      color: $primary;
+    }
   }
 }
 
@@ -90,11 +101,95 @@ header {
     .la-times {
       opacity: 1;
       visibility: 1;
+      // z-index: 100;
       // transition-delay: 0;
     }
   }
 }
 
+@media screen and (min-width: 992px) {
+  header {
+    padding: 50px 0;
+    img {
+      width: 160px;
+    }
+    nav {
+      margin-top: 2rem;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+      width: 100%;
+      .pos {
+        visibility: hidden;
+      }
+      .icon-wrapper {
+        display: none;
+      }
+      ul {
+        width: auto;
+        position: relative;
+        left: unset;
+        height: unset;
+        top: unset;
+        bottom: unset;
+        line-height: unset;
+        overflow: unset;
+        overflow-y: unset;
+        justify-content: center;
+        background: none;
+        flex-direction: row;
+        visibility: visible;
+        opacity: 1;
+        padding: 0;
+        :first-child {
+          margin: 0;
+        }
+        li {
+          margin: 0;
+          margin-left: 12px;
+          a {
+            letter-spacing: 0;
+            color: #585c66;
+            text-decoration: none;
+            position: relative;
+            display: block;
+            padding: 5px 1px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 100;
+            transition: 0.5s;
+            z-index: 1;
+            &:hover {
+              color: $secondary;
+            }
+          }
+          .active-link {
+            color: $primary;
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+      .e-store {
+        display: unset;
+        width: 150px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    nav {
+      .e-store {
+        display: unset;
+        width: 165px;
+      }
+    }
+  }
+}
+
+//hamburger
 .hamburger {
   width: 27px;
   height: 27px;
@@ -108,13 +203,52 @@ header {
     height: 2px;
     background-color: black;
     border-radius: 2px;
+    transition: all 0.4s;
   }
+  .line-1,
   .line-3 {
-    width: 60%;
+    width: 70%;
+  }
+  .line-1 {
+    margin-left: auto;
+    margin-right: auto;
   }
   &:hover {
     .line {
-      background-color: #313131;
+      background-color: $primary;
+    }
+    .line-1,
+    .line-3 {
+      width: 27px;
     }
   }
 }
+
+.head-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .head-container {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .head-container {
+    width: 820px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .head-container {
+    width: 920px;
+  }
+}
+
+// @media screen and (min-width: 1200px) {
+//   .head-container {
+//     width: 1120px;
+//   }
+// }

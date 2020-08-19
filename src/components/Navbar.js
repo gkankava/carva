@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import logo from "../assets/logos/cb-logo.svg";
+import { NavLink, Link } from "react-router-dom";
+import logo from "../assets/logos/cb-logo-b.svg";
 
 function Navbar() {
   const [navActive, setNavActive] = useState(false);
@@ -16,10 +16,13 @@ function Navbar() {
   };
 
   return (
-    <header>
-      <img src={logo} alt="cb-logo-img" />
+    <header className="head-container">
+      <Link to="/">
+        <img src={logo} alt="cb-logo-img" />
+      </Link>
       <h3>ლუქები და დასალუქი მოწყობილობები</h3>
       <nav className={`${navActive}`}>
+        <button className="e-store pos">ონლაინ მაღაზია</button>
         <ul>
           {link("ჩვენს-შესახებ", "ჩვენს შესახებ")}
           {link("კატალოგი", "კატალოგი")}
