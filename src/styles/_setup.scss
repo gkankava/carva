@@ -1,0 +1,62 @@
+// pallete
+$primary: #3e626b;
+$secondary: #4b4b4b;
+$custom: #eeeeee;
+$lod: #b7b7b7;
+
+//fonts
+// @import "./fonts/bpg-arial-master/css/bpg-arial.min.css";
+@import url("//cdn.web-fonts.ge/fonts/bpg-arial-caps/css/bpg-arial-caps.min.css");
+@import url("//cdn.web-fonts.ge/fonts/dejavu-sans-condensed/css/dejavu-sans-condensed.min.css");
+@import url("//cdn.web-fonts.ge/fonts/dejavu-sans-extra-light/css/dejavu-sans-extra-light.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-rioni-vera/css/bpg-rioni-vera.min.css");
+
+$arial: "BPG Arial Caps", sans-serif;
+$dejavuC: "DejaVu Sans Condensed", sans-serif;
+$dejavuEL: "DejaVu Sans Extra Light", sans-serif;
+$vera: "BPG Rioni Vera", sans-serif;
+
+* {
+  font-family: $dejavuEL;
+  :active {
+    outline: none;
+  }
+}
+
+//containers --------------------------------
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 95%;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 820px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 920px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .dif-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 2560px;
+  }
+}

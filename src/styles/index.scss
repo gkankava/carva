@@ -1,0 +1,53 @@
+@import "./setup";
+@import "./login";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* {
+  &:active,
+  :focus {
+    outline: none;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+#root {
+  position: relative;
+}
+
+button {
+  margin-left: 4rem;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  border: none;
+  background-color: white;
+  box-shadow: 0 0 2px rgba(#000000, 0.2);
+  color: #585c66;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: all, 0.3s;
+  &:hover,
+  &:active {
+    background-color: $primary;
+    color: white;
+  }
+}
+
+.loader {
+  fill: $primary !important;
+  opacity: 0.5;
+  size: 50%;
+}
