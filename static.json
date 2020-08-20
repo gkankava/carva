@@ -1,0 +1,11 @@
+{
+  "root": "build/",
+  "routes": {
+      "/**": "index.html"
+   },
+  "proxie":{
+      "/api": {
+         "origin" : "https://carva-broox-server.herokuapp.com/api"
+      }
+   }
+}
