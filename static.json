@@ -5,7 +5,7 @@
   },
   "proxies": {
     "/api": {
-      "origin": "https://carva-broox-server.herokuapp.com/api"
+      "origin": "https://carva-broox-server.herokuapp.com"
     }
   }
 }
